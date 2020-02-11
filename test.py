@@ -1,16 +1,19 @@
-# -*- coding: utf-8 -*-
 
-##### Import os module to enable python to read directory.
-#### Use exception handling in case user has not got os module installed in the machine.
-try:
-    import os
-except ImportError:
-    os.system("pip install os")
-    import os
+#### Unit testing to check if the returned results of the highest temperature are correct from the Weather_script.py.
+import Weather_script
 
-### Pops up command prompt.
-os.system("start cmd")
+import unittest
 
-#### type 'python "Weather script.py"' in the command prompt to test that the script works.
+class TestResults(unittest.TestCase):
 
+    def test_region(self):
+        self.assertEqual(Weather_script.Region_str, 'Highland & Eilean Siar')
 
+    def test_temperature(self):
+        self.assertEqual(Weather_script.Temperature_value,15.8)
+
+    def test_datetime(self):
+        self.assertEqual(Weather_script.Date_time_str,'2016-03-17T00:00:00')
+
+if __name__ == '__main__':
+    unittest.main()
