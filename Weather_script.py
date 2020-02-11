@@ -72,11 +72,8 @@ Date_time_str = Data_pq_max_temp['ObservationDate'][Data_pq_max_temp.index[0]]
 Temperature_value = Data_pq_max_temp['ScreenTemperature'][Data_pq_max_temp.index[0]]
 Region_str = Data_pq_max_temp['Region'][Data_pq_max_temp.index[0]]
 
-print("The date of the hottest year is "+ Date_time_str)
+print("The date of the hottest day is "+ Date_time_str)
 print("The hottest temperature is " + str(Temperature_value))
 print("The region of the hottest temperature is " + Region_str)
-
-
-
 
 
